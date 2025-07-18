@@ -50,7 +50,7 @@ Dự án Go được xây dựng theo kiến trúc Clean Architecture với cấ
 ### 1. Cài đặt dependencies
 
 ```bash
-go mod download
+go mod tidy
 ```
 
 ### 2. Cấu hình database
