@@ -265,5 +265,5 @@ Parse request
 Call use case
 Return response
 Các patterns này giúp project có kiến trúc rõ ràng, dễ test, dễ maintain và có thể scale tốt.
-```
+
 
