@@ -186,29 +186,17 @@ go build -o bin/server cmd/server/main.go
 GOOS=linux GOARCH=amd64 go build -o bin/server-linux cmd/server/main.go
 ```
 
-## Đóng góp
-
-1. Fork repository
-2. Tạo feature branch
-3. Commit changes
-4. Push to branch
-5. Create Pull Request
-
-## License
-
-MIT License
-
-
 ###  🔧 Commands hữu ích:
-
+```bash
 1.make run         # Chạy app
 2.make dev         # Hot reload development
 3.make test        # Chạy tests
 4.make build       # Build binary
 5.make docker-run  # Chạy với Docker
+```
 
 ###
-
+```bash
 1. Clean Architecture Pattern
 Project được tổ chức theo Clean Architecture với 4 layers rõ ràng:
 Domain Layer (internal/domain/): Entities, Repository interfaces, Services
@@ -271,5 +259,5 @@ Parse request
 Call use case
 Return response
 Các patterns này giúp project có kiến trúc rõ ràng, dễ test, dễ maintain và có thể scale tốt.
-
+```
 
