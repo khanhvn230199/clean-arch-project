@@ -196,19 +196,25 @@ GOOS=linux GOARCH=amd64 go build -o bin/server-linux cmd/server/main.go
 ```
 
 ###
-```bash
 1. Clean Architecture Pattern
-Project được tổ chức theo Clean Architecture với 4 layers rõ ràng:
+Project được tổ chức theo Clean Architecture với 4 layers:
 Domain Layer (internal/domain/): Entities, Repository interfaces, Services
 Use Case Layer (internal/usecase/): Application business logic
 Interface Layer (api/): HTTP handlers, routes
 Infrastructure Layer (infrastructure/): Database connections, repository implementations
+
 2. Repository Pattern
 Interface: internal/domain/repository/user_repo.go - định nghĩa contract
 Implementation: infrastructure/repository/user_repository_impl.go - concrete implementation
 Tách biệt business logic khỏi data access logic
+
 3. Dependency Injection Pattern
 Được thể hiện trong cmd/server/main.go:
+```bash
+userRepo := repository.NewUserRepository(db)
+userUseCase := usecase.NewUserUseCase(userRepo)
+userHandler := handler.NewUserHandler(userUseCase)
+```
 
 4. Factory Pattern
 NewUser() trong entity/user.go - factory cho User entity
